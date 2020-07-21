@@ -1,0 +1,4 @@
+model aa.mod;
+data 22.dat;
+option solver gurobi;
+solve;
