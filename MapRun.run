@@ -1,0 +1,68 @@
+model C:\VISHAL\AMPL\Map_Color\Colormod.mod;
+data C:\VISHAL\AMPL\Map_Color\colormod.dat;
+
+option solver cplex;
+
+option cplex_options 'branchdir=-1';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'branchdir=0';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'branchdir=1';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'nodeselect=0';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'nodeselect=1';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'nodeselect=2';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'nodeselect=3';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'fpheur=-1';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'fpheur=0';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'fpheur=1';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'fpheur=2';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'rinsheur=-1';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'rinsheur=0';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'rinsheur=2';
+solve;
+display _solve_elapsed_time;
+
+option cplex_options 'fraccuts=-1 disjcuts=-1 splitcuts=-1 zerohalfcuts=-1';
+solve;
+display _solve_elapsed_time; 
+
+option cplex_options 'fraccuts=2 disjcuts=3 splitcuts=3 zerohalfcuts=2';
+solve;
+display _solve_elapsed_time; 
